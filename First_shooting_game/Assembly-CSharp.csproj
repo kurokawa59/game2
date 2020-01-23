@@ -193,12 +193,16 @@
     <Compile Include="Assets\Script\BackgroundController.cs" />
     <Compile Include="Assets\Script\DispersionEnemyController.cs" />
     <Compile Include="Assets\Script\DispersionEnemyGenerator.cs" />
+    <Compile Include="Assets\Script\GameClearManager.cs" />
+    <Compile Include="Assets\Script\GameOverManager.cs" />
     <Compile Include="Assets\Script\NormalEnemyController.cs" />
     <Compile Include="Assets\Script\NormalEnemyGenerator.cs" />
     <Compile Include="Assets\Script\NormalEnemyProjectile.cs" />
     <Compile Include="Assets\Script\PlayerController.cs" />
     <Compile Include="Assets\Script\PlayerProjectile.cs" />
     <Compile Include="Assets\Script\ProjectileController.cs" />
+    <Compile Include="Assets\Script\ScoreManager.cs" />
+    <Compile Include="Assets\Script\SelectManager.cs" />
     <Compile Include="Assets\Script\SpaceShip.cs" />
     <Compile Include="Assets\Script\TelepoEnemyGenerator.cs" />
     <Compile Include="Assets\Script\TelepoEnemyProjectile.cs" />

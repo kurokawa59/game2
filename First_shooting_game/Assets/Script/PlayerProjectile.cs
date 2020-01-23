@@ -16,12 +16,6 @@ public class PlayerProjectile : ProjectileController
         }
 
     }
-    //弾が当たったら敵と弾が消える
-    void OnTriggerEnter2D(Collider2D collision) {
-        if (collision.gameObject.tag == "TelepoEnemy" || collision.gameObject.tag == "NormalEnemy" || collision.gameObject.tag == "DispersionEnemy") {
-            Destroy(collision.gameObject);
-            Destroy(gameObject);
-        }
-    }
+    
 
 }

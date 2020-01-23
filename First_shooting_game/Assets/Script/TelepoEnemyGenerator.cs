@@ -11,8 +11,8 @@ public class TelepoEnemyGenerator : MonoBehaviour
     // Update is called once per frame
     void Update() {
         float x = Random.Range(-3.0f, 3.0f);
-        //5秒ごとに敵を生成
-        if (time > 5.0f) {
+        //4秒ごとに敵を生成
+        if (time > 4.0f) {
             int count = GameObject.FindGameObjectsWithTag("TelepoEnemy").Length;
             //敵は3体まで生成
             if (count > enemycount) {

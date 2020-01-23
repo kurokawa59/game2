@@ -6,7 +6,6 @@ public class DispersionEnemyController : SpaceShip
 {
     public int NwayCount = 3;//何方向に攻撃するか
     public int NwayAngle = 10;//弾の角度
-    
 
     // Update is called once per frame
     void Update()

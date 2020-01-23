@@ -5,7 +5,7 @@ using UnityEngine;
 //瞬間移動する敵の制御
 public class TeleportEnemyController : SpaceShip
 {
-    public int count = 0;
+    public int count;
 
     // Update is called once per frame
     void Update() {

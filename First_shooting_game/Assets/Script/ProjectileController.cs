@@ -10,4 +10,5 @@ public class ProjectileController : MonoBehaviour {
         transform.Translate(x, y, 0);
     }
 
+
 }
