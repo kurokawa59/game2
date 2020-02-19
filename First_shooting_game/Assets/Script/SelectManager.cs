@@ -14,6 +14,6 @@ public class SelectManager : MonoBehaviour
     }
 
     public void BossGame() {
-        SceneManager.LoadScene("BossScene");
+        SceneManager.LoadScene("ExtremeScene");
     }
 }

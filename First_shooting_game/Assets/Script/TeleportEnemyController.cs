@@ -13,13 +13,13 @@ public class TeleportEnemyController : SpaceShip
         
         //Time.deltatimeごとに3回素早く敵が動く
         if (count < 3) {
-            base.translate(2.0f, 0.1f);
+            base.translate2(2, 1);
             count += 1;
 
         }
         //生成されて1秒後に弾を撃つ
         //1秒後にまた動く
-        if (time > 0.5f) {
+        if (time > 1.0f) {
             base.Shot(gameObject.transform);
             count = 0;
             time = 0.0f;

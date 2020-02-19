@@ -6,19 +6,21 @@ using UnityEngine.SceneManagement;
 
 public class ScoreManager : MonoBehaviour
 {
-    private int score=0;
+    private int score;
     private Text Scorelabel;
     public int clearlimit;
     public AudioClip clearSE;
     private AudioSource source;
 
-    // Start is called before the first frame update
+    
     void Start()
     {
+        //オブジェクトのスコアラベルのテキストを取得してこれを更新する
         Scorelabel = GameObject.Find("Scorelabel").GetComponent<Text>();
         Scorelabel.text = "Score:" + score;
         source = GetComponent<AudioSource>();
     }
+    //目標スコアにいったらゲームクリア
     void Update() {
         if (score == clearlimit) {
             SceneManager.LoadScene("GameClearScene");
@@ -26,6 +28,7 @@ public class ScoreManager : MonoBehaviour
         }
     }
 
+    //敵オブジェクトが消滅したときのポイント加算の関数
     public void AddScore(int count) {
         score += count;
         Scorelabel.text = "Score:" + score;

@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/NormalScene.unity
+- path: Assets/Scenes/ExtremeScene.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

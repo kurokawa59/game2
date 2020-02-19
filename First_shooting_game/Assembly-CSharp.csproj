@@ -191,10 +191,16 @@
     <Compile Include="Assets\pp\Pew Pew\Scripts\Utilities\Singleton.cs" />
     <Compile Include="Assets\pp\Pew Pew\Scripts\Utilities\SortingLayerExposer.cs" />
     <Compile Include="Assets\Script\BackgroundController.cs" />
+    <Compile Include="Assets\Script\BeamController.cs" />
+    <Compile Include="Assets\Script\Boss.cs" />
+    <Compile Include="Assets\Script\BossA.cs" />
+    <Compile Include="Assets\Script\BossGenerator.cs" />
+    <Compile Include="Assets\Script\BossProjectile.cs" />
     <Compile Include="Assets\Script\DispersionEnemyController.cs" />
     <Compile Include="Assets\Script\DispersionEnemyGenerator.cs" />
     <Compile Include="Assets\Script\GameClearManager.cs" />
     <Compile Include="Assets\Script\GameOverManager.cs" />
+    <Compile Include="Assets\Script\HpBarController.cs" />
     <Compile Include="Assets\Script\NormalEnemyController.cs" />
     <Compile Include="Assets\Script\NormalEnemyGenerator.cs" />
     <Compile Include="Assets\Script\NormalEnemyProjectile.cs" />
@@ -252,6 +258,9 @@
     </Reference>
     <Reference Include="Unity.Rider.Editor">
       <HintPath>X:/shota/First_shooting_game/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.Sprite.Editor">
+      <HintPath>X:/shota/First_shooting_game/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
       <HintPath>X:/shota/First_shooting_game/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class NormalEnemyGenerator : MonoBehaviour
 {
-    public float time = 0.0f;
+    protected float time;
     public GameObject NormalEnemyPrefab;
     public int enemycount;
 
@@ -12,8 +12,8 @@ public class NormalEnemyGenerator : MonoBehaviour
     void Update()
     {
         float x = Random.Range(-3.0f,3.0f);
-        //3秒ごとに敵を生成
-        if (time > 3.0f) {
+        //1秒ごとに敵を生成
+        if (time > 1.0f) {
             //NormalEnemyオブジェクトの数を数える
             int count = GameObject.FindGameObjectsWithTag("NormalEnemy").Length;
             //敵は5体まで生成

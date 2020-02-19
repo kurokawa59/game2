@@ -5,47 +5,53 @@ using UnityEngine;
 //敵キャラの親クラス
 public class SpaceShip : MonoBehaviour
 {
-    public float time = 0.0f;
-    public float x;
-    public float y;
-    public float x_pos = 0.0f;
-    public float y_pos = 0.0f;
+    protected float time;
     public GameObject EnemyProjectilePrefab;
-    public int score;
     private ScoreManager sm;
     public int killpoint;
     public AudioClip enemyshotSE;
     public AudioClip enemydeadSE;
+    private Rigidbody2D rb;
+    private PlayerController player;
     
 
     void Start() {
         transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y * -1, transform.localScale.z);
         sm = GameObject.Find("ScoreManager").GetComponent<ScoreManager>();
-
+        rb = GetComponent<Rigidbody2D>();
+        player = GameObject.Find("Player").GetComponent<PlayerController>();
     }
     void Update() {
         //-6より下にいったらオブジェクトを削除
-        if (y_pos < -6) {
+        if (transform.position.y < -6.0f) {
             Destroy(gameObject);
         }
     }
 
     //敵の移動
     public void translate(float rand_x,float rand_y) {
-        x_pos = transform.position.x;
-        y_pos = transform.position.y;
-        x = Random.Range(-rand_x, rand_x);
-        y = Random.Range(-rand_y, 0.0f);
-        if (x_pos + x <= -3.0f) {
-            x = Random.Range(0.0f, rand_x);
+        float x = Random.Range(-rand_x, rand_x);
+        float y = Random.Range(-rand_y, 0.0f);
+        float x_pos = transform.position.x;
+        //x軸方向の条件
+        if (x_pos + x > -3.0f && x_pos + x < 3.0f) {
+            rb.velocity = new Vector2(x, y);
+        }
+    }
 
-        } else if (x_pos + x >= 3.0f) {
-            x = Random.Range(-rand_x, 0.0f);
+    //瞬間移動する敵だけの移動
+    public void translate2(int rand_x, int rand_y) {
+        float x = Random.Range(-rand_x, rand_x);
+        float y = Random.Range(-rand_y, 0.0f);
+        float x_pos = transform.position.x;
+        //x軸方向の条件
+        if (x_pos + x > -3.0f && x_pos + x < 3.0f) {
+            transform.Translate(x, y,0);
         }
-        //y座標が-2以上のときだけ移動する
-        if (y_pos+y > -2) {
-            transform.Translate(x, y, 0);
-        }
+    }
+    //止まる
+    public void stop() {
+        rb.velocity = Vector2.zero;
     }
 
     //敵の通常の攻撃
@@ -61,18 +67,21 @@ public class SpaceShip : MonoBehaviour
 
     
     void OnTriggerEnter2D(Collider2D collision) {
+        float y_pos = transform.position.y;
         //プレイヤーとの当たり判定
         if (collision.gameObject.tag == "Player") {
-            Destroy(collision.gameObject);
+            player.destroyedCount += 1;
         }
 
         //弾が当たったら敵と弾が消える
-        if (collision.gameObject.tag == "Playerprojectile") {
-            sm.AddScore(killpoint);
-            AudioSource.PlayClipAtPoint(enemyshotSE,transform.position);
-            Destroy(collision.gameObject);
+        if(y_pos < 5.4) {
+            if (collision.gameObject.tag == "Playerprojectile") {
+                sm.AddScore(killpoint);
+                AudioSource.PlayClipAtPoint(enemydeadSE, transform.position);
+                Destroy(collision.gameObject);
                 Destroy(gameObject);
             }
+        }
         
     }
     
