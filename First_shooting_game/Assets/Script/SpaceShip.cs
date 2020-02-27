@@ -2,15 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-//敵キャラの親クラス
+//敵キャラ(雑魚)の親クラス
 public class SpaceShip : MonoBehaviour
 {
     protected float time;
-    public GameObject EnemyProjectilePrefab;
+    [SerializeField]private GameObject EnemyProjectilePrefab;
     private ScoreManager sm;
     public int killpoint;
-    public AudioClip enemyshotSE;
-    public AudioClip enemydeadSE;
+    [SerializeField]private AudioClip enemyshotSE;
+    [SerializeField]private AudioClip enemydeadSE;
     private Rigidbody2D rb;
     private PlayerController player;
     

@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 public class PlayerController : MonoBehaviour
 {
     public GameObject ProjectilePrefab;
+    public GameObject[] hpIcon;
+
     private float time;
     public int destroyedCount;//倒された数
 
@@ -16,7 +18,6 @@ public class PlayerController : MonoBehaviour
     private Renderer renderer;
     private Animator anim;
 
-    public GameObject[] hpIcon;
 
     void Start() {
         Player_Instance = this;
@@ -141,30 +142,30 @@ public class PlayerController : MonoBehaviour
     //ダメージを受けた時に点滅してこの間だけレイヤーを変更して
     //衝突しないようにすることで無敵になる
     IEnumerator Blink() {
-        this.gameObject.layer = LayerMask.NameToLayer("Invisible");
+        gameObject.layer = LayerMask.NameToLayer("Invisible");
 
         for (int i=0;i < 4; i++) {
             renderer.enabled = !renderer.enabled;
 
             yield return new WaitForSeconds(0.5f);
         }
-        this.gameObject.layer = LayerMask.NameToLayer("Default");
+        gameObject.layer = LayerMask.NameToLayer("Default");
     }
 
 
     //弾との衝突判定
     void OnTriggerEnter2D(Collider2D collision) {
-        if (collision.gameObject.tag == "Enemyprojectile") {
+        if (collision.gameObject.tag == "Enemyprojectile" ) {
 
             //点滅する
             StartCoroutine("Blink");
 
             AudioSource.PlayClipAtPoint(deadSE,transform.position);
-            if(destroyedCount < 2) {
+            if(destroyedCount < 4) {
                 destroyedCount += 1;
                 UpdateHpIcon();
             }else{
-                //残機を3機失ったらゲームオーバー
+                //残機を5機失ったらゲームオーバー
                 SceneManager.LoadScene("GameOverScene");
             }
             

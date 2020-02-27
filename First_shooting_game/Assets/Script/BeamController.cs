@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//ビームのスクリプト
 public class BeamController : ProjectileController
 {
     private float ylimit;
