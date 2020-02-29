@@ -3,18 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//追尾の攻撃など少し厄介な攻撃がテーマ
 public class BossB : Boss {
-    private int AttackFlag;//攻撃の遷移のためのフラグ
-    private int NattackCount;//通常攻撃を何回するか
+
     private int Attack9Count;//攻撃9を何回するか
-    private int RandAtk;//攻撃8と攻撃9のどちらを実行するか
     private int c;
 
     [SerializeField]private GameObject AvatarPrefab;
     [SerializeField] private GameObject TrackingProjectilePrefab;
-
-    private PlayerController Player;
-    Slider HpBar;
 
 
     void Start() {
@@ -23,10 +19,9 @@ public class BossB : Boss {
         HpBar = hp.GetComponent<Slider>();
         rb = GetComponent<Rigidbody2D>();
 
-        NattackCount = 0;
         c = 0;//攻撃8を1回だけ行うカウント
         Attack9Count = 0;//攻撃9を何回行っているかのカウント
-        BossMaxHp = 1;//ボスBの体力
+        BossMaxHp = 30;//ボスBの体力
 
         HpBar.maxValue = BossMaxHp;
         HpBar.value = BossMaxHp;
@@ -61,13 +56,13 @@ public class BossB : Boss {
                 rb.velocity = Vector2.zero;
                 //攻撃8を実行
                 if (RandAtk == 0) {
-                    Attack8(gameObject.transform);
+                    Attack8();
                     time = 0.0f;
 
                 //攻撃9を実行
                 }else if (RandAtk==1) {
                     if (Attack9Count < 5) {
-                        Attack9(gameObject.transform);
+                        Attack9();
                         Attack9Count += 1;
                         time = 0.0f;
 
@@ -95,7 +90,7 @@ public class BossB : Boss {
     }
 
     //分身を出してそれぞれの分身は固定の位置で攻撃してくる(攻撃8)
-    public void Attack8(Transform bossB) {
+    public void Attack8() {
         if (c == 0) {
             //3つの分身を出す
             for (int i = 0; i < 3; i++) {
@@ -109,8 +104,9 @@ public class BossB : Boss {
             if (GameObject.FindGameObjectsWithTag("Avatar").Length > 0) {
                 float r = Random.Range(1, 6);
                 float angle = -15 + r * 5;
-                Instantiate(BossProjectilePrefab, bossB.position, Quaternion.Euler(new Vector3(0.0f, 0.0f, angle)));
+                Instantiate(BossProjectilePrefab, transform.position, Quaternion.Euler(new Vector3(0.0f, 0.0f, angle)));
                 AudioSource.PlayClipAtPoint(BossShotSE, transform.position);
+            //分身が全滅したら
             } else if (GameObject.FindGameObjectsWithTag("Avatar").Length == 0) {
                 AttackFlag = 0;
                 c = 0;
@@ -119,9 +115,9 @@ public class BossB : Boss {
     }
 
     //追尾する弾を撃つ(攻撃9)
-    public void Attack9(Transform bossB) {
+    public void Attack9() {
 
-        Instantiate(TrackingProjectilePrefab,bossB.position,Quaternion.identity);
+        Instantiate(TrackingProjectilePrefab,transform.position,Quaternion.identity);
     }
 
     void OnTriggerEnter2D(Collider2D collision) {

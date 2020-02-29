@@ -8,7 +8,12 @@ public class Boss : MonoBehaviour
 {
     protected float time;
     protected Rigidbody2D rb;
-    
+    protected int RandAtk;
+    protected PlayerController Player;
+    protected Slider HpBar;
+    protected int AttackFlag;//攻撃の遷移のためのフラグ
+    protected int NattackCount;//通常攻撃を何回するか
+
     protected int BossMaxHp;//ボスの体力
 
     [SerializeField]protected GameObject BossProjectilePrefab;//ボスの通常の弾のプレファブ
@@ -26,6 +31,7 @@ public class Boss : MonoBehaviour
     void Start()
     {
         time = 0.0f;
+        NattackCount = 0;
         transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y * -1, transform.localScale.z);//反転させる
         rb = GetComponent<Rigidbody2D>();
         
@@ -71,35 +77,6 @@ public class Boss : MonoBehaviour
     public void BossShot(Transform boss) {
         Instantiate(BossProjectilePrefab, boss.position, boss.rotation);
         AudioSource.PlayClipAtPoint(BossShotSE, transform.position);
-    }
-
-
-    //以降の攻撃はラスボスでも使うのでここで実装する
-    //正面にビームを撃つ(攻撃1)
-    public void attack1(Transform boss) {
-
-        Instantiate(BeamProjectilePrefab, new Vector3(boss.transform.position.x - 0.32f, boss.transform.position.y, 0), boss.rotation);
-        AudioSource.PlayClipAtPoint(BossShotSE, transform.position);
-        Instantiate(BeamProjectilePrefab, new Vector3(boss.transform.position.x + 0.33f, boss.transform.position.y, 0), boss.rotation);
-        AudioSource.PlayClipAtPoint(BossShotSE, transform.position);
-        Instantiate(BossBeamPrefab, new Vector3(boss.transform.position.x + 0.03f, boss.transform.position.y - 3.0f, 0), boss.rotation);
-        AudioSource.PlayClipAtPoint(BossBeamSE, transform.position);
-    }
-    //分身を出してそれぞれの分身は固定の位置で攻撃してくる(攻撃2)
-    public void attack2() {
-
-    }
-    //分散攻撃を連続でやってくる(攻撃3)
-    public void attack3() {
-
-    }
-    //追尾してくる弾を撃つ(攻撃4)
-    public void attack4() {
-
-    }
-    //瞬間移動で爆弾を置いていき爆弾が爆発すると何方向かに弾が飛んでいく(攻撃5)
-    public void attack5() {
-
     }
 
     

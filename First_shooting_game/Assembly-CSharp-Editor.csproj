@@ -63,8 +63,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\pp\Image Effects\Editor\ImageEffects\BloomAndFlaresEditor.cs" />
-    <Compile Include="Assets\pp\Image Effects\Editor\ImageEffects\BloomEditor.cs" />
     <Compile Include="Assets\pp\Pew Pew\Editor\ParticleEffectorEditor.cs" />
     <Compile Include="Assets\pp\Pew Pew\Editor\ParticleEmitterInRandomDirectionEditor.cs" />
     <Compile Include="Assets\pp\Pew Pew\Editor\ParticleEmitterInRandomDirectionEditor1.cs" />

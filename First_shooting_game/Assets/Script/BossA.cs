@@ -3,18 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//ボスの中で最弱の敵(難易度を高くないように設定)
 public class BossA : Boss {
-    private int AttackFlag;//攻撃の遷移のためのフラグ
-    private int NattackCount;//通常攻撃を何回するか
+
     private int Attack6Count;//攻撃6を何回するか
     private int Attack7Count;//攻撃7を何回するか
-    private int RandAtk;//攻撃6と攻撃7のどちらを実行するか
-    private PlayerController Player;
-    Slider HpBar;
 
 
     void Start() {
-        NattackCount = 0;
         Attack6Count = 0;
         Attack7Count = 0;
 
@@ -23,7 +19,7 @@ public class BossA : Boss {
         Player = GameObject.Find("Player").GetComponent<PlayerController>();//Playerオブジェクトからスクリプトを取得
         HpBar = hp.GetComponent<Slider>();
 
-        BossMaxHp = 1;//ボスの体力
+        BossMaxHp = 30;//ボスの体力
         HpBar.maxValue = BossMaxHp;
         HpBar.value = BossMaxHp;
         base.starttranslate(-2.0f);
@@ -54,7 +50,7 @@ public class BossA : Boss {
                 if (RandAtk == 0) {
 
                     if(Attack6Count < 10) {
-                        Attack6(gameObject.transform, 5);
+                        Attack6(5);
                         Attack6Count += 1;
                         time = 0.0f;
 
@@ -66,7 +62,7 @@ public class BossA : Boss {
                 //攻撃7を実行
                 }else if (RandAtk==1) {
                     if (Attack7Count < 10) {
-                        Attack7(gameObject.transform);
+                        Attack7();
                         Attack7Count += 1;
                         time = 0.0f;
 
@@ -94,24 +90,24 @@ public class BossA : Boss {
     }
 
     //ランダムな方向に攻撃する(攻撃6)
-    public void Attack6(Transform bossA, int NwayCount) {
+    public void Attack6(int NwayCount) {
 
         float r = Random.Range(1, NwayCount + 1);
         float angle = -(NwayCount + 1) * 5 / 2 + r * 5;
-        Instantiate(BossProjectilePrefab, bossA.position, Quaternion.Euler(new Vector3(0.0f, 0.0f, angle)));
+        Instantiate(BossProjectilePrefab, transform.position, Quaternion.Euler(new Vector3(0.0f, 0.0f, angle)));
         AudioSource.PlayClipAtPoint(BossShotSE, transform.position);
 
     }
 
     //正面にビームを発射する(攻撃7)
     //ビームの横にも弾を出してビームっぽくする
-    public void Attack7(Transform bossA) {
+    public void Attack7() {
 
-        Instantiate(BeamProjectilePrefab, new Vector3(bossA.transform.position.x - 0.32f, bossA.transform.position.y, 0), bossA.rotation);
+        Instantiate(BeamProjectilePrefab, new Vector3(transform.position.x - 0.32f, transform.position.y, 0), transform.rotation);
         AudioSource.PlayClipAtPoint(BossShotSE, transform.position);
-        Instantiate(BeamProjectilePrefab, new Vector3(bossA.transform.position.x + 0.33f, bossA.transform.position.y, 0), bossA.rotation);
+        Instantiate(BeamProjectilePrefab, new Vector3(transform.position.x + 0.33f, transform.position.y, 0), transform.rotation);
         AudioSource.PlayClipAtPoint(BossShotSE, transform.position);
-        Instantiate(BossBeamPrefab, new Vector3(bossA.transform.position.x + 0.03f, bossA.transform.position.y - 3.0f, 0), bossA.rotation);
+        Instantiate(BossBeamPrefab, new Vector3(transform.position.x + 0.03f, transform.position.y - 3.0f, 0), transform.rotation);
         AudioSource.PlayClipAtPoint(BossBeamSE, transform.position);
     }
 

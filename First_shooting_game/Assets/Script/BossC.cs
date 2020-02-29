@@ -3,14 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//瞬間移動がテーマの敵
 public class BossC : Boss {
-    private int AttackFlag;//攻撃の遷移のためのフラグ
+    
     private int Attack10Count;//攻撃10を何回するか
     private int Attack11Count;//攻撃11を何回するか
     private int Attack12Count;//攻撃12を何回するか
-    private int RandAtk;//攻撃10と攻撃11と攻撃12のどれを実行するか
-    private PlayerController Player;
-    private Slider HpBar;
     private int ShieldCount;
 
     [SerializeField]private GameObject DelayProjectilePrefab;
@@ -20,7 +18,7 @@ public class BossC : Boss {
         Attack10Count = 0;
         Attack11Count = 0;
         Attack12Count = 0;
-        BossMaxHp = 1;//ボスの体力
+        BossMaxHp = 30;//ボスの体力
 
         rb = GetComponent<Rigidbody2D>();
         GameObject hp = GameObject.Find("BossHpBar");
@@ -51,14 +49,14 @@ public class BossC : Boss {
                 //シールドが全部壊れたときは攻撃10か攻撃11か攻撃12を実行
             } else if (ShieldCount == 0) {
                 if (AttackFlag == 0) {
-                    RandAtk = Random.Range(0, 1);
+                    RandAtk = Random.Range(0, 3);
                     rb.velocity = Vector2.zero;
                     AttackFlag = 1;
                 } else if (AttackFlag == 1) {
                     //攻撃10を実行
                     if (RandAtk == 0) {
                         if (Attack10Count < 5) {
-                            Attack10(gameObject.transform);
+                            Attack10();
                             Attack10Count += 1;
                             time = 0.0f;
 
@@ -119,11 +117,11 @@ public class BossC : Boss {
     
 
     //瞬間移動してからプレイヤーに向けた弾を撃つ攻撃する(攻撃10)
-    public void Attack10(Transform bossC) {
+    public void Attack10() {
 
         base.translate2(2.0f, 1.0f);
 
-        BossCShot(bossC.transform);
+        BossCShot();
 
     }
 
@@ -205,8 +203,8 @@ public class BossC : Boss {
     }
 
     //追跡してくる攻撃
-    public void BossCShot(Transform boss) {
-        Instantiate(BossTrackProjectilePrefab, boss.position, boss.rotation);
+    public void BossCShot() {
+        Instantiate(BossTrackProjectilePrefab, transform.position, transform.rotation);
         AudioSource.PlayClipAtPoint(BossShotSE, transform.position);
     }
 
@@ -215,15 +213,15 @@ public class BossC : Boss {
         
         base.translate2(2.0f,0.5f);
 
-        RandomShot(gameObject.transform, 5);
+        RandomShot(5);
     }
 
     //ランダムな方向に攻撃する(攻撃6)
-    public void RandomShot(Transform bossA, int NwayCount) {
+    public void RandomShot( int NwayCount) {
 
         float r = Random.Range(1, NwayCount + 1);
         float angle = -(NwayCount + 1) * 5 / 2 + r * 5;
-        Instantiate(BossProjectilePrefab, bossA.position, Quaternion.Euler(new Vector3(0.0f, 0.0f, angle)));
+        Instantiate(BossProjectilePrefab, transform.position, Quaternion.Euler(new Vector3(0.0f, 0.0f, angle)));
         AudioSource.PlayClipAtPoint(BossShotSE, transform.position);
 
     }

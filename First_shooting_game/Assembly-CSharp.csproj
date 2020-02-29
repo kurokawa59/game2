@@ -63,137 +63,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\pp\Image Effects\Standard Assets\Effects\ImageEffects\Scripts\Bloom.cs" />
-    <Compile Include="Assets\pp\Image Effects\Standard Assets\Effects\ImageEffects\Scripts\BloomAndFlares.cs" />
-    <Compile Include="Assets\pp\Image Effects\Standard Assets\Effects\ImageEffects\Scripts\BloomOptimized.cs" />
-    <Compile Include="Assets\pp\Image Effects\Standard Assets\Effects\ImageEffects\Scripts\Blur.cs" />
-    <Compile Include="Assets\pp\Image Effects\Standard Assets\Effects\ImageEffects\Scripts\BlurOptimized.cs" />
-    <Compile Include="Assets\pp\Image Effects\Standard Assets\Effects\ImageEffects\Scripts\PostEffectsBase.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Audio\AudioPlayer.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Audio\AudioToggle.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Audio\BGMAudioPlayer.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Bombs\Bomb.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Bombs\BombManager.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Damage\DamageEnemies.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Damage\DamagePlayer.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Debug\FPS.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Effectors\Blackhole.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Effectors\DisableEffectWhenAnotherEffectorInScene.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Effectors\ScaleOscillation.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Enemies\Boss Parts\BossPartDirectional.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Enemies\Boss Parts\BossPartDropDown.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Enemies\Boss Parts\BossPartImpl.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Enemies\Boss Parts\BossPartQuick.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Enemies\Boss Parts\BossPartSeperateShip.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Enemies\Boss Parts\BossPartShoot.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Enemies\Boss Parts\BossPartTop.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Enemies\ChallengeEnemyOnDeath.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Enemies\EnemyHealth.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Enemies\EnemyShoot.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Enemies\EnemyShootWhenRequested.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Enemies\Movement\AdjustableMoveSpeed.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Enemies\Movement\ChallengeMovement.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Enemies\Movement\ClassicMovement.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Enemies\Movement\DirectionalMovement.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Enemies\Movement\DropDownMovement.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Enemies\Movement\EnemyMovement.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Enemies\Movement\EnemyMoveReceiver.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Enemies\Movement\EnemyMoveRegister.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Enemies\Movement\EnemyMoveSpeedAdjuster.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Enemies\Movement\EnemyQuickMovement.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Enemies\Movement\MovementGridForceApplication.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Enemies\Movement\MovementState.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Enemies\Movement\ScreenBoundsBounceMovement.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Enemies\Movement\StationaryMovement.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Enemies\Movement\VerticalGroupMovement.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Enemies\Movement\VerticalWrapAroundMovement.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Enemies\SpriteFadeIn.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Followers\FollowerHealth.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\GameManager.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Grid\Demo_Grid.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Grid\GridStatus.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Grid\Interpolate.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Grid\PointMass.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Grid\Spring.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Grid\WarpingGrid.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Particle Effects\Demo\DemoConstraintSwitcher.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Particle Effects\Demo\DemoMouseController.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Particle Effects\Demo\DemoParticleEmitterSwitcher.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Particle Effects\Demo\DemoSceneSwitcher.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Particle Effects\Helper\CircularArray.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Particle Effects\Helper\StaticExtensions.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Particle Effects\Particles\CustomParticle.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Particle Effects\Particles\Emitters\CustomParticleEmitter.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Particle Effects\Particles\Emitters\ParticleEmitterInObjectDirection.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Particle Effects\Particles\Emitters\ParticleEmitterInRandomDirection.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Particle Effects\Particles\ParticleBuilder.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Particle Effects\Particles\ParticleEffector.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Particle Effects\Particles\ParticleFactory.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Particle Effects\Particles\ParticleRenderer.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Particle Effects\Pulsate.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Player\Movement\PlayerController.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Player\Movement\PlayerInput.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Player\PlayerComponentDisabler.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Player\PlayerHealth.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Player\PlayerItemUI.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Player\PlayerShoot.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Player\PlayerShootController.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Player\PlayerShootModules.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Player\Shield.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Player\ShootRecoilImpl.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Powerups\BonusScorePowerUp.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Powerups\DoubleShotPowerUp.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Powerups\DropPowerUpOnDeath.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Powerups\PowerUp.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Powerups\PowerUpCollector.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Powerups\PowerUpFallDown.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Powerups\ShootSpeedPowerUp.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Powerups\SpeedBoostPowerUp.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Projectiles\HomingProjectile.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Projectiles\Projectile.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Round\MenuEnemyDirector.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Round\Round.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Round\RoundEnemyImpl.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Round\RoundManager.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Round\RoundProgressHelper.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Round\RoundText.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Round\ScreenBounds.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Score\PointPopUpUI.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Score\PointsText.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Score\RoundPersistentScore.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Score\Score.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Shop\ExtraBombActionable.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Shop\ExtraFollowerActionable.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Shop\ExtraLifeActionable.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Shop\ExtraShotActionable.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Shop\PointsImages.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Shop\ShieldActionable.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Shop\ShootDamageActionable.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Shop\ShootModuleActionable.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Shop\ShopController.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Shop\ShopPurchasableActionable.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Shop\ShopPurchaseAction.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Shop\UpgradeShipSpeedActionable.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Shop\UpgradeShootSpeedActionable.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Sprites\SpriteOutline.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\UI\ButtonAnimationController.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\UI\ButtonAnimator.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\UI\FadeOutText.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\UI\GameOverUIHandler.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\UI\InfoScreenToggle.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\UI\MainMenuHandler.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\UI\PauseHandler.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Utilities\CameraShake.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Utilities\CoroutineHandler.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Utilities\Extensions.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Utilities\ObjectPool.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Utilities\Rotate.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Utilities\Singleton.cs" />
-    <Compile Include="Assets\pp\Pew Pew\Scripts\Utilities\SortingLayerExposer.cs" />
     <Compile Include="Assets\Script\AvatarController.cs" />
     <Compile Include="Assets\Script\BackgroundController.cs" />
     <Compile Include="Assets\Script\BeamController.cs" />
     <Compile Include="Assets\Script\BombController.cs" />
+    <Compile Include="Assets\Script\BombController2.cs" />
     <Compile Include="Assets\Script\Boss.cs" />
     <Compile Include="Assets\Script\BossA.cs" />
     <Compile Include="Assets\Script\BossB.cs" />
@@ -208,6 +82,7 @@
     <Compile Include="Assets\Script\DispersionEnemyGenerator.cs" />
     <Compile Include="Assets\Script\GameClearManager.cs" />
     <Compile Include="Assets\Script\GameOverManager.cs" />
+    <Compile Include="Assets\Script\LastBoss.cs" />
     <Compile Include="Assets\Script\NormalEnemyController.cs" />
     <Compile Include="Assets\Script\NormalEnemyGenerator.cs" />
     <Compile Include="Assets\Script\NormalEnemyProjectile.cs" />
@@ -234,20 +109,6 @@
     <Compile Include="Assets\Text-Juicer-master\Scripts\Effects\XModifier.cs" />
     <Compile Include="Assets\Text-Juicer-master\Scripts\Effects\YModifier.cs" />
     <Compile Include="Assets\Text-Juicer-master\Scripts\JuicedText.cs" />
-    <None Include="Assets\pp\Image Effects\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlendOneOne.shader" />
-    <None Include="Assets\pp\Image Effects\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\VignetteShader.shader" />
-    <None Include="Assets\pp\Image Effects\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\MobileBloom.shader" />
-    <None Include="Assets\pp\Pew Pew\Documentation\Unity Version.txt" />
-    <None Include="Assets\pp\Image Effects\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\MobileBlur.shader" />
-    <None Include="Assets\pp\Pew Pew\Shaders\Sprite-Outline.shader" />
-    <None Include="Assets\pp\Image Effects\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\SeparableBlurPlus.shader" />
-    <None Include="Assets\pp\Image Effects\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\MultiPassHollywoodFlares.shader" />
-    <None Include="Assets\pp\Image Effects\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BrightPassFilter2.shader" />
-    <None Include="Assets\pp\Image Effects\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BrightPassFilter.shader" />
-    <None Include="Assets\pp\Image Effects\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\LensFlareCreate.shader" />
-    <None Include="Assets\pp\Image Effects\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\Blend.shader" />
-    <None Include="Assets\pp\Image Effects\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlurAndFlares.shader" />
-    <None Include="Assets\pp\Image Effects\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlendForBloom.shader" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>X:/shota/First_shooting_game/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
@@ -461,359 +322,350 @@
     <Reference Include="Unity.Analytics.Tracker">
       <HintPath>X:/shota/First_shooting_game/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
     </Reference>
-    <Reference Include="mscorlib">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
-    </Reference>
-    <Reference Include="System">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/System.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Core">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/System.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Runtime.Serialization">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/System.Runtime.Serialization.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Xml">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/System.Xml.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Xml.Linq">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/System.Xml.Linq.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Numerics">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/System.Numerics.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Numerics.Vectors">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/System.Numerics.Vectors.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Net.Http">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/System.Net.Http.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.CSharp">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Microsoft.CSharp.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Data">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/System.Data.dll</HintPath>
+    <Reference Include="netstandard">
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Win32.Primitives">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/Microsoft.Win32.Primitives.dll</HintPath>
-    </Reference>
-    <Reference Include="netstandard">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/netstandard.dll</HintPath>
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/Microsoft.Win32.Primitives.dll</HintPath>
     </Reference>
     <Reference Include="System.AppContext">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.AppContext.dll</HintPath>
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.AppContext.dll</HintPath>
     </Reference>
     <Reference Include="System.Collections.Concurrent">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Collections.Concurrent.dll</HintPath>
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Collections.Concurrent.dll</HintPath>
     </Reference>
     <Reference Include="System.Collections">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Collections.dll</HintPath>
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Collections.dll</HintPath>
     </Reference>
     <Reference Include="System.Collections.NonGeneric">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Collections.NonGeneric.dll</HintPath>
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Collections.NonGeneric.dll</HintPath>
     </Reference>
     <Reference Include="System.Collections.Specialized">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Collections.Specialized.dll</HintPath>
-    </Reference>
-    <Reference Include="System.ComponentModel.Annotations">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ComponentModel.Annotations.dll</HintPath>
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Collections.Specialized.dll</HintPath>
     </Reference>
     <Reference Include="System.ComponentModel">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ComponentModel.dll</HintPath>
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.ComponentModel.dll</HintPath>
     </Reference>
     <Reference Include="System.ComponentModel.EventBasedAsync">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ComponentModel.EventBasedAsync.dll</HintPath>
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.ComponentModel.EventBasedAsync.dll</HintPath>
     </Reference>
     <Reference Include="System.ComponentModel.Primitives">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ComponentModel.Primitives.dll</HintPath>
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.ComponentModel.Primitives.dll</HintPath>
     </Reference>
     <Reference Include="System.ComponentModel.TypeConverter">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ComponentModel.TypeConverter.dll</HintPath>
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.ComponentModel.TypeConverter.dll</HintPath>
     </Reference>
     <Reference Include="System.Console">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Console.dll</HintPath>
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Console.dll</HintPath>
     </Reference>
     <Reference Include="System.Data.Common">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Data.Common.dll</HintPath>
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Data.Common.dll</HintPath>
     </Reference>
     <Reference Include="System.Diagnostics.Contracts">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Diagnostics.Contracts.dll</HintPath>
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Diagnostics.Contracts.dll</HintPath>
     </Reference>
     <Reference Include="System.Diagnostics.Debug">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Diagnostics.Debug.dll</HintPath>
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Diagnostics.Debug.dll</HintPath>
     </Reference>
     <Reference Include="System.Diagnostics.FileVersionInfo">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Diagnostics.FileVersionInfo.dll</HintPath>
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Diagnostics.FileVersionInfo.dll</HintPath>
     </Reference>
     <Reference Include="System.Diagnostics.Process">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Diagnostics.Process.dll</HintPath>
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Diagnostics.Process.dll</HintPath>
     </Reference>
     <Reference Include="System.Diagnostics.StackTrace">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Diagnostics.StackTrace.dll</HintPath>
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Diagnostics.StackTrace.dll</HintPath>
     </Reference>
     <Reference Include="System.Diagnostics.TextWriterTraceListener">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Diagnostics.TextWriterTraceListener.dll</HintPath>
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Diagnostics.TextWriterTraceListener.dll</HintPath>
     </Reference>
     <Reference Include="System.Diagnostics.Tools">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Diagnostics.Tools.dll</HintPath>
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Diagnostics.Tools.dll</HintPath>
     </Reference>
     <Reference Include="System.Diagnostics.TraceSource">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Diagnostics.TraceSource.dll</HintPath>
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Diagnostics.TraceSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.Tracing">
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Diagnostics.Tracing.dll</HintPath>
     </Reference>
     <Reference Include="System.Drawing.Primitives">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Drawing.Primitives.dll</HintPath>
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Drawing.Primitives.dll</HintPath>
     </Reference>
     <Reference Include="System.Dynamic.Runtime">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Dynamic.Runtime.dll</HintPath>
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Dynamic.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="System.Globalization.Calendars">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Globalization.Calendars.dll</HintPath>
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Globalization.Calendars.dll</HintPath>
     </Reference>
     <Reference Include="System.Globalization">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Globalization.dll</HintPath>
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Globalization.dll</HintPath>
     </Reference>
     <Reference Include="System.Globalization.Extensions">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Globalization.Extensions.dll</HintPath>
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Globalization.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Compression">
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.IO.Compression.dll</HintPath>
     </Reference>
     <Reference Include="System.IO.Compression.ZipFile">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.IO.Compression.ZipFile.dll</HintPath>
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.IO.Compression.ZipFile.dll</HintPath>
     </Reference>
     <Reference Include="System.IO">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.IO.dll</HintPath>
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.IO.dll</HintPath>
     </Reference>
     <Reference Include="System.IO.FileSystem">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.IO.FileSystem.dll</HintPath>
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.IO.FileSystem.dll</HintPath>
     </Reference>
     <Reference Include="System.IO.FileSystem.DriveInfo">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.IO.FileSystem.DriveInfo.dll</HintPath>
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.IO.FileSystem.DriveInfo.dll</HintPath>
     </Reference>
     <Reference Include="System.IO.FileSystem.Primitives">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.IO.FileSystem.Primitives.dll</HintPath>
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.IO.FileSystem.Primitives.dll</HintPath>
     </Reference>
     <Reference Include="System.IO.FileSystem.Watcher">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.IO.FileSystem.Watcher.dll</HintPath>
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.IO.FileSystem.Watcher.dll</HintPath>
     </Reference>
     <Reference Include="System.IO.IsolatedStorage">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.IO.IsolatedStorage.dll</HintPath>
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.IO.IsolatedStorage.dll</HintPath>
     </Reference>
     <Reference Include="System.IO.MemoryMappedFiles">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.IO.MemoryMappedFiles.dll</HintPath>
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.IO.MemoryMappedFiles.dll</HintPath>
     </Reference>
     <Reference Include="System.IO.Pipes">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.IO.Pipes.dll</HintPath>
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.IO.Pipes.dll</HintPath>
     </Reference>
     <Reference Include="System.IO.UnmanagedMemoryStream">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.IO.UnmanagedMemoryStream.dll</HintPath>
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.IO.UnmanagedMemoryStream.dll</HintPath>
     </Reference>
     <Reference Include="System.Linq">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Linq.dll</HintPath>
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Linq.dll</HintPath>
     </Reference>
     <Reference Include="System.Linq.Expressions">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Linq.Expressions.dll</HintPath>
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Linq.Expressions.dll</HintPath>
     </Reference>
     <Reference Include="System.Linq.Parallel">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Linq.Parallel.dll</HintPath>
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Linq.Parallel.dll</HintPath>
     </Reference>
     <Reference Include="System.Linq.Queryable">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Linq.Queryable.dll</HintPath>
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Linq.Queryable.dll</HintPath>
     </Reference>
-    <Reference Include="System.Net.Http.Rtc">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Net.Http.Rtc.dll</HintPath>
+    <Reference Include="System.Net.Http">
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Net.Http.dll</HintPath>
     </Reference>
     <Reference Include="System.Net.NameResolution">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Net.NameResolution.dll</HintPath>
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Net.NameResolution.dll</HintPath>
     </Reference>
     <Reference Include="System.Net.NetworkInformation">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Net.NetworkInformation.dll</HintPath>
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Net.NetworkInformation.dll</HintPath>
     </Reference>
     <Reference Include="System.Net.Ping">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Net.Ping.dll</HintPath>
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Net.Ping.dll</HintPath>
     </Reference>
     <Reference Include="System.Net.Primitives">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Net.Primitives.dll</HintPath>
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Net.Primitives.dll</HintPath>
     </Reference>
     <Reference Include="System.Net.Requests">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Net.Requests.dll</HintPath>
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Net.Requests.dll</HintPath>
     </Reference>
     <Reference Include="System.Net.Security">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Net.Security.dll</HintPath>
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Net.Security.dll</HintPath>
     </Reference>
     <Reference Include="System.Net.Sockets">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Net.Sockets.dll</HintPath>
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Net.Sockets.dll</HintPath>
     </Reference>
     <Reference Include="System.Net.WebHeaderCollection">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Net.WebHeaderCollection.dll</HintPath>
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Net.WebHeaderCollection.dll</HintPath>
     </Reference>
     <Reference Include="System.Net.WebSockets.Client">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Net.WebSockets.Client.dll</HintPath>
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Net.WebSockets.Client.dll</HintPath>
     </Reference>
     <Reference Include="System.Net.WebSockets">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Net.WebSockets.dll</HintPath>
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Net.WebSockets.dll</HintPath>
     </Reference>
     <Reference Include="System.ObjectModel">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ObjectModel.dll</HintPath>
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.ObjectModel.dll</HintPath>
     </Reference>
     <Reference Include="System.Reflection">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Reflection.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Reflection.Emit">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Reflection.Emit.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Reflection.Emit.ILGeneration">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Reflection.Emit.ILGeneration.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Reflection.Emit.Lightweight">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Reflection.Emit.Lightweight.dll</HintPath>
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Reflection.dll</HintPath>
     </Reference>
     <Reference Include="System.Reflection.Extensions">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Reflection.Extensions.dll</HintPath>
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Reflection.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="System.Reflection.Primitives">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Reflection.Primitives.dll</HintPath>
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Reflection.Primitives.dll</HintPath>
     </Reference>
     <Reference Include="System.Resources.Reader">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Resources.Reader.dll</HintPath>
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Resources.Reader.dll</HintPath>
     </Reference>
     <Reference Include="System.Resources.ResourceManager">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Resources.ResourceManager.dll</HintPath>
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Resources.ResourceManager.dll</HintPath>
     </Reference>
     <Reference Include="System.Resources.Writer">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Resources.Writer.dll</HintPath>
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Resources.Writer.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime.CompilerServices.VisualC">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.CompilerServices.VisualC.dll</HintPath>
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Runtime.CompilerServices.VisualC.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.dll</HintPath>
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime.Extensions">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.Extensions.dll</HintPath>
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Runtime.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime.Handles">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.Handles.dll</HintPath>
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Runtime.Handles.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime.InteropServices">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.InteropServices.dll</HintPath>
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Runtime.InteropServices.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime.InteropServices.RuntimeInformation">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Runtime.InteropServices.WindowsRuntime">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.InteropServices.WindowsRuntime.dll</HintPath>
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime.Numerics">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.Numerics.dll</HintPath>
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Runtime.Numerics.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime.Serialization.Formatters">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.Serialization.Formatters.dll</HintPath>
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Runtime.Serialization.Formatters.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime.Serialization.Json">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.Serialization.Json.dll</HintPath>
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Runtime.Serialization.Json.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime.Serialization.Primitives">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.Serialization.Primitives.dll</HintPath>
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Runtime.Serialization.Primitives.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime.Serialization.Xml">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.Serialization.Xml.dll</HintPath>
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Runtime.Serialization.Xml.dll</HintPath>
     </Reference>
     <Reference Include="System.Security.Claims">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Security.Claims.dll</HintPath>
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Security.Claims.dll</HintPath>
     </Reference>
     <Reference Include="System.Security.Cryptography.Algorithms">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Security.Cryptography.Algorithms.dll</HintPath>
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Security.Cryptography.Algorithms.dll</HintPath>
     </Reference>
     <Reference Include="System.Security.Cryptography.Csp">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Security.Cryptography.Csp.dll</HintPath>
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Security.Cryptography.Csp.dll</HintPath>
     </Reference>
     <Reference Include="System.Security.Cryptography.Encoding">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Security.Cryptography.Encoding.dll</HintPath>
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Security.Cryptography.Encoding.dll</HintPath>
     </Reference>
     <Reference Include="System.Security.Cryptography.Primitives">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Security.Cryptography.Primitives.dll</HintPath>
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Security.Cryptography.Primitives.dll</HintPath>
     </Reference>
     <Reference Include="System.Security.Cryptography.X509Certificates">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Security.Cryptography.X509Certificates.dll</HintPath>
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Security.Cryptography.X509Certificates.dll</HintPath>
     </Reference>
     <Reference Include="System.Security.Principal">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Security.Principal.dll</HintPath>
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Security.Principal.dll</HintPath>
     </Reference>
     <Reference Include="System.Security.SecureString">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Security.SecureString.dll</HintPath>
-    </Reference>
-    <Reference Include="System.ServiceModel.Duplex">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ServiceModel.Duplex.dll</HintPath>
-    </Reference>
-    <Reference Include="System.ServiceModel.Http">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ServiceModel.Http.dll</HintPath>
-    </Reference>
-    <Reference Include="System.ServiceModel.NetTcp">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ServiceModel.NetTcp.dll</HintPath>
-    </Reference>
-    <Reference Include="System.ServiceModel.Primitives">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ServiceModel.Primitives.dll</HintPath>
-    </Reference>
-    <Reference Include="System.ServiceModel.Security">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ServiceModel.Security.dll</HintPath>
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Security.SecureString.dll</HintPath>
     </Reference>
     <Reference Include="System.Text.Encoding">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Text.Encoding.dll</HintPath>
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Text.Encoding.dll</HintPath>
     </Reference>
     <Reference Include="System.Text.Encoding.Extensions">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Text.Encoding.Extensions.dll</HintPath>
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Text.Encoding.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="System.Text.RegularExpressions">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Text.RegularExpressions.dll</HintPath>
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Text.RegularExpressions.dll</HintPath>
     </Reference>
     <Reference Include="System.Threading">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Threading.dll</HintPath>
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Threading.dll</HintPath>
     </Reference>
     <Reference Include="System.Threading.Overlapped">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Threading.Overlapped.dll</HintPath>
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Threading.Overlapped.dll</HintPath>
     </Reference>
     <Reference Include="System.Threading.Tasks">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Threading.Tasks.dll</HintPath>
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Threading.Tasks.dll</HintPath>
     </Reference>
     <Reference Include="System.Threading.Tasks.Parallel">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Threading.Tasks.Parallel.dll</HintPath>
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Threading.Tasks.Parallel.dll</HintPath>
     </Reference>
     <Reference Include="System.Threading.Thread">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Threading.Thread.dll</HintPath>
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Threading.Thread.dll</HintPath>
     </Reference>
     <Reference Include="System.Threading.ThreadPool">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Threading.ThreadPool.dll</HintPath>
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Threading.ThreadPool.dll</HintPath>
     </Reference>
     <Reference Include="System.Threading.Timer">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Threading.Timer.dll</HintPath>
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Threading.Timer.dll</HintPath>
     </Reference>
     <Reference Include="System.ValueTuple">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ValueTuple.dll</HintPath>
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.ValueTuple.dll</HintPath>
     </Reference>
     <Reference Include="System.Xml.ReaderWriter">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Xml.ReaderWriter.dll</HintPath>
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Xml.ReaderWriter.dll</HintPath>
     </Reference>
     <Reference Include="System.Xml.XDocument">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Xml.XDocument.dll</HintPath>
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Xml.XDocument.dll</HintPath>
     </Reference>
     <Reference Include="System.Xml.XmlDocument">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Xml.XmlDocument.dll</HintPath>
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Xml.XmlDocument.dll</HintPath>
     </Reference>
     <Reference Include="System.Xml.XmlSerializer">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Xml.XmlSerializer.dll</HintPath>
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Xml.XmlSerializer.dll</HintPath>
     </Reference>
     <Reference Include="System.Xml.XPath">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Xml.XPath.dll</HintPath>
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Xml.XPath.dll</HintPath>
     </Reference>
     <Reference Include="System.Xml.XPath.XDocument">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Xml.XPath.XDocument.dll</HintPath>
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Xml.XPath.XDocument.dll</HintPath>
     </Reference>
-    <Reference Include="UnityScript">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/unityscript/UnityScript.dll</HintPath>
+    <Reference Include="System.Numerics.Vectors">
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/Extensions/2.0.0/System.Numerics.Vectors.dll</HintPath>
     </Reference>
-    <Reference Include="UnityScript.Lang">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/unityscript/UnityScript.Lang.dll</HintPath>
+    <Reference Include="System.Runtime.InteropServices.WindowsRuntime">
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/Extensions/2.0.0/System.Runtime.InteropServices.WindowsRuntime.dll</HintPath>
     </Reference>
-    <Reference Include="Boo.Lang">
-      <HintPath>X:/2019.2.11f1/Editor/Data/MonoBleedingEdge/lib/mono/unityscript/Boo.Lang.dll</HintPath>
+    <Reference Include="mscorlib">
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/mscorlib.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition">
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.ComponentModel.Composition.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core">
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data">
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Drawing.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Compression.FileSystem">
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.IO.Compression.FileSystem.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net">
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics">
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Numerics.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Runtime.Serialization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceModel.Web">
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.ServiceModel.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions">
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Transactions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web">
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows">
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml">
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Serialization">
+      <HintPath>X:/2019.2.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Serialization.dll</HintPath>
     </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

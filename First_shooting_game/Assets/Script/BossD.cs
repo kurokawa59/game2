@@ -3,23 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//分散攻撃がメインの敵
 public class BossD : Boss {
-    private int AttackFlag;//攻撃の遷移のためのフラグ
-    private int NAttackCount;//通常攻撃のカウント
+    
     private int Attack13Count;//攻撃13を何回するか
     private int Attack15Count;//攻撃15を何回するか
-    private int RandAtk;//攻撃13と攻撃14と攻撃15のどれを実行するか
-    private PlayerController Player;
 
-    Slider HpBar;
 
     [SerializeField] private GameObject BossProjectilePrefab_slow2;
 
     void Start() {
-        NAttackCount = 0;
         Attack13Count = 0;
         Attack15Count = 0;
-        BossMaxHp = 1;//ボスの体力
+        BossMaxHp = 30;//ボスの体力
 
         rb = GetComponent<Rigidbody2D>();
         GameObject hp = GameObject.Find("BossHpBar");
@@ -35,18 +31,17 @@ public class BossD : Boss {
     void Update() {
         //0.5秒経ったら行動する
         if (time > 0.5f) {
-            //シールドが存在しているときは移動と分散攻撃だけ
             if (AttackFlag == 0) {
                 rb.velocity = Vector2.zero;
-                if(NAttackCount < 5) {
+                if(NattackCount < 5) {
                     trans_and_shot();
                     time = 0.0f;
-                    NAttackCount += 1;
+                    NattackCount += 1;
                 } else {
                     AttackFlag = 1;
-                    NAttackCount = 0;
+                    NattackCount = 0;
                     time = 0.0f;
-                    RandAtk = Random.Range(2, 3);
+                    RandAtk = Random.Range(0, 3);
                 }
 
                 //攻撃13か攻撃14か攻撃15を実行
@@ -100,7 +95,7 @@ public class BossD : Boss {
     }
     
 
-    //移動してから分散攻撃(分散3か5)する(攻撃10)
+    //移動してから分散攻撃(分散3か5)する(攻撃13)
     public void Attack13(int NwayCount) {
 
         base.bosstranslate(2.0f, 1.0f);
@@ -112,7 +107,7 @@ public class BossD : Boss {
 
     }
 
-    //らせん状に弾が飛んでいく
+    //らせん状に弾が飛んでいく(攻撃14)
     IEnumerator Attack14(int c) {
 
         for(int i = 1; i < c; i++) {
@@ -123,7 +118,7 @@ public class BossD : Boss {
         AttackFlag = 0;
     }
 
-    //弾を発射したら数秒後に2段階分裂する
+    //弾を発射したら数秒後に2段階分裂する(攻撃15)
     IEnumerator Attack15(int NwayCount) {
 
         //最初の弾
@@ -181,9 +176,9 @@ public class BossD : Boss {
         if (y_pos < 5.4) {
             if (collision.gameObject.tag == "Playerprojectile") {
                 AudioSource.PlayClipAtPoint(BossDamagedSE, transform.position);
-                if (HpBar.value > 0) {
+                if (HpBar.value > 1) {
                     HpBar.value -= 1;
-                } else if (HpBar.value == 0) {
+                } else if (HpBar.value == 1) {
                     Destroy(gameObject);
                 }
                 Destroy(collision.gameObject);

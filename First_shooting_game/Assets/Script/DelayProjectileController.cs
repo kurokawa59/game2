@@ -10,12 +10,23 @@ public class DelayProjectileController : ProjectileController
     private float time;
     private int count;
 
-    
+    //オブジェクトが消える座標
+    private float xlimit1;
+    private float xlimit2;
+    private float ylimit1;
+    private float ylimit2;
+
+
     void Start() {
         transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y * -1, transform.localScale.z);
         rb = GetComponent<Rigidbody2D>();
         player = GameObject.Find("Player");
         count = 1;
+
+        xlimit1 = -6.0f;
+        xlimit2 = 6.0f;
+        ylimit1 = -6.0f;
+        ylimit2 = 6.0f;
     }
 
     // Update is called once per frame
@@ -39,5 +50,9 @@ public class DelayProjectileController : ProjectileController
 
         }
         time += Time.deltaTime;
+
+        if (transform.position.y > ylimit2 || transform.position.y < ylimit1 || transform.position.x < xlimit1 || transform.position.x > xlimit2) {
+            Destroy(gameObject);
+        }
     }
 }
