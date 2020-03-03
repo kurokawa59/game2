@@ -10,7 +10,7 @@ public class Boss : MonoBehaviour
     protected Rigidbody2D rb;
     protected int RandAtk;
     protected PlayerController Player;
-    protected Slider HpBar;
+    protected HpManager hp;
     protected int AttackFlag;//攻撃の遷移のためのフラグ
     protected int NattackCount;//通常攻撃を何回するか
 
@@ -69,6 +69,13 @@ public class Boss : MonoBehaviour
         }
     }
 
+    public void Stop() {
+        if (transform.position.x == -2.9f || transform.position.x == 2.9f || transform.position.y == 4.3f || transform.position.y == 1.5f) {
+            rb.velocity = Vector2.zero;
+
+        }
+    }
+
     public void starttranslate(float y) {
         rb.velocity = new Vector2(0, y);
     }
@@ -79,5 +86,21 @@ public class Boss : MonoBehaviour
         AudioSource.PlayClipAtPoint(BossShotSE, transform.position);
     }
 
-    
+    void OnTriggerEnter2D(Collider2D collision) {
+        float y_pos = transform.position.y;
+        //プレイヤーとの当たり判定
+        if (collision.gameObject.tag == "Player") {
+            Player.destroyedCount += 1;
+        }
+        //弾が当たったらHpが減る
+        if (y_pos < 5.4) {
+            if (collision.gameObject.tag == "Playerprojectile") {
+                AudioSource.PlayClipAtPoint(BossDamagedSE, transform.position);
+                hp.HpDown(gameObject);
+                Destroy(collision.gameObject);
+            }
+        }
+
+    }
+
 }

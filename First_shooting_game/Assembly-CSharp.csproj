@@ -82,6 +82,7 @@
     <Compile Include="Assets\Script\DispersionEnemyGenerator.cs" />
     <Compile Include="Assets\Script\GameClearManager.cs" />
     <Compile Include="Assets\Script\GameOverManager.cs" />
+    <Compile Include="Assets\Script\HpManager.cs" />
     <Compile Include="Assets\Script\LastBoss.cs" />
     <Compile Include="Assets\Script\NormalEnemyController.cs" />
     <Compile Include="Assets\Script\NormalEnemyGenerator.cs" />

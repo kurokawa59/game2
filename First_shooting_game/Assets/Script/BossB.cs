@@ -14,20 +14,18 @@ public class BossB : Boss {
 
 
     void Start() {
-        GameObject hp = GameObject.Find("BossHpBar");
+        hp = GameObject.Find("HpManager").GetComponent<HpManager>();
         Player = GameObject.Find("Player").GetComponent<PlayerController>();//Playerオブジェクトからスクリプトを取得
-        HpBar = hp.GetComponent<Slider>();
         rb = GetComponent<Rigidbody2D>();
 
         c = 0;//攻撃8を1回だけ行うカウント
+        BossMaxHp = 30;//ボスの体力
         Attack9Count = 0;//攻撃9を何回行っているかのカウント
-        BossMaxHp = 30;//ボスBの体力
-
-        HpBar.maxValue = BossMaxHp;
-        HpBar.value = BossMaxHp;
+        hp.SetHp(BossMaxHp);
         base.starttranslate(-2.0f);
     }
     void Update() {
+        base.Stop();
         //0.5秒経ったら行動する
         int AvatarCount = GameObject.FindGameObjectsWithTag("Avatar").Length;//分身の数
         if (AvatarCount != 0) {
@@ -80,6 +78,7 @@ public class BossB : Boss {
     }
     //移動と攻撃のまとまり
     public void Trans_and_shot() {
+        
         base.bosstranslate(2.0f, 1.0f);
 
         base.bosstranslate(2.0f, 1.0f);
@@ -106,6 +105,7 @@ public class BossB : Boss {
                 float angle = -15 + r * 5;
                 Instantiate(BossProjectilePrefab, transform.position, Quaternion.Euler(new Vector3(0.0f, 0.0f, angle)));
                 AudioSource.PlayClipAtPoint(BossShotSE, transform.position);
+                
             //分身が全滅したら
             } else if (GameObject.FindGameObjectsWithTag("Avatar").Length == 0) {
                 AttackFlag = 0;
@@ -120,27 +120,5 @@ public class BossB : Boss {
         Instantiate(TrackingProjectilePrefab,transform.position,Quaternion.identity);
     }
 
-    void OnTriggerEnter2D(Collider2D collision) {
-        float y_pos = transform.position.y;
-        //プレイヤーとの当たり判定
-        if (collision.gameObject.tag == "Player") {
-            Player.destroyedCount += 1;
-        }
-        //弾が当たったらHpが減る
-        if (y_pos < 5.4) {
-
-            if (collision.gameObject.tag == "Playerprojectile") {
-                AudioSource.PlayClipAtPoint(BossDamagedSE, transform.position);
-                if (HpBar.value > 1) {
-                    HpBar.value -= 1;
-                } else if (HpBar.value == 1) {
-                    Destroy(gameObject);
-                }
-                Destroy(collision.gameObject);
-            }
-
-        }   
-        
-
-    }
+   
 }

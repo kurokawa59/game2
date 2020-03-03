@@ -31,8 +31,9 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //スマホでの移動
         //プレイヤーの動き(-3.1 < x < 3.1の範囲で動く)
-        /*
+        
         //タッチ判定
         if (Input.touchCount > 0) {
 
@@ -42,7 +43,7 @@ public class PlayerController : MonoBehaviour
 
                 //画面外に行かないようにする
                 if (-3.1 < transform.position.x) {
-                    transform.Translate(-0.05f, 0, 0);
+                    transform.Translate(-0.07f, 0, 0);
                     if (touch.phase == TouchPhase.Began) {
                         //押した時
                         anim.SetBool("left_long", true);
@@ -70,7 +71,7 @@ public class PlayerController : MonoBehaviour
             } else if (touch.position.x > Screen.width * 0.5f) {
                 //画面外に行かないようにする
                 if (3.1 > transform.position.x) {
-                    transform.Translate(0.05f, 0, 0);
+                    transform.Translate(0.07f, 0, 0);
                     if (touch.phase == TouchPhase.Began) {
                         //押した時
                         anim.SetBool("right_long", true);
@@ -100,10 +101,10 @@ public class PlayerController : MonoBehaviour
             }
 
         }
-        */
         
-
         
+        /*
+        //キーボードで移動
         if (Input.GetKey(KeyCode.LeftArrow)) {
             if(-3.1 < transform.position.x) {
                 transform.Translate(-0.05f, 0, 0);
@@ -126,7 +127,7 @@ public class PlayerController : MonoBehaviour
             anim.SetBool("right_long", false);
             anim.SetBool("left_long", false);
         }
-        
+        */
 
         //0.5秒ごとに弾を撃ち続ける
         if (time > 0.5f) {

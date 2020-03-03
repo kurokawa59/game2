@@ -21,17 +21,16 @@ public class BossC : Boss {
         BossMaxHp = 30;//ボスの体力
 
         rb = GetComponent<Rigidbody2D>();
-        GameObject hp = GameObject.Find("BossHpBar");
+        hp = GameObject.Find("HpManager").GetComponent<HpManager>();
         Player = GameObject.Find("Player").GetComponent<PlayerController>();//Playerオブジェクトからスクリプトを取得
-        HpBar = hp.GetComponent<Slider>();
-
+        
         transform.position = new Vector3(0, 4.5f, 0);//最初の位置
-        HpBar.maxValue = BossMaxHp;
-        HpBar.value = BossMaxHp;
         AttackFlag = 0;
+        hp.SetHp(BossMaxHp);
     }
     
     void Update() {
+        base.Stop();
         //0.5秒経ったら行動する
         ShieldCount = GameObject.FindGameObjectsWithTag("Shield").Length;//シールドの数
         if (ShieldCount != 0) {
@@ -226,25 +225,4 @@ public class BossC : Boss {
 
     }
     
-    void OnTriggerEnter2D(Collider2D collision) {
-        float y_pos = transform.position.y;
-        //プレイヤーとの当たり判定
-        if (collision.gameObject.tag == "Player") {
-            Player.destroyedCount += 1;
-        }
-        //弾が当たったらHpが減る
-        if (y_pos < 5.4) {
-            if (collision.gameObject.tag == "Playerprojectile") {
-                AudioSource.PlayClipAtPoint(BossDamagedSE, transform.position);
-                if (HpBar.value > 1) {
-                    HpBar.value -= 1;
-                } else if (HpBar.value == 1) {
-                    Destroy(gameObject);
-                }
-                Destroy(collision.gameObject);
-            }
-        }
-    
-
-    }
 }

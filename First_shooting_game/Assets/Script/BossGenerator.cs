@@ -31,6 +31,8 @@ public class BossGenerator : MonoBehaviour
     private int LastBossCount1;
     private int LastBossCount2;
 
+    private int end;
+
     [SerializeField] protected AudioClip BossDeadSE;
     private Image img;
     private PlayerController Player;
@@ -39,6 +41,7 @@ public class BossGenerator : MonoBehaviour
 
         audioSource = GetComponent<AudioSource>();
         img = GameObject.Find("Image").GetComponent<Image>();
+        img.transform.gameObject.SetActive(false);
         Player = GameObject.Find("Player").GetComponent<PlayerController>();
         audioSource.clip = AudioClip1;
         audioSource.Play();
@@ -49,7 +52,9 @@ public class BossGenerator : MonoBehaviour
         BossDCount = 0;
         LastBossCount1 = 0;
         LastBossCount2 = 0;
+        end = 0;
         img.color = Color.clear;
+        
         
 }
 
@@ -60,7 +65,7 @@ public class BossGenerator : MonoBehaviour
         int countC = GameObject.FindGameObjectsWithTag("BossC").Length;//ボスCの数
         int countD = GameObject.FindGameObjectsWithTag("BossD").Length;//ボスDの数
         int countLast = GameObject.FindGameObjectsWithTag("LastBoss").Length;//ラスボスの数
-        int end = 0;
+        
 
         if (BossBCount == 1) {
             //ボスAが倒されたら
@@ -92,7 +97,8 @@ public class BossGenerator : MonoBehaviour
         } else if (LastBossCount1 == 1) {
             //ボスDが倒されたらアラートを鳴らす
             if (countD == 0) {
-                for(int i = 0; i < 5; i++) {
+                img.transform.gameObject.SetActive(true);
+                for (int i = 0; i < 5; i++) {
                     Player.hpIcon[i].SetActive(true);
                 }
                 StartCoroutine(Alert(3));

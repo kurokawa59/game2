@@ -10,9 +10,8 @@ public class TeleportEnemyController : SpaceShip
     // Update is called once per frame
     void Update() {
 
-        
         //Time.deltatimeごとに3回素早く敵が動く
-        if (count < 3) {
+        if (count < 2) {
             base.translate2(2, 1);
             count += 1;
 

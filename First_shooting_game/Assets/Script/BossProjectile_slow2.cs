@@ -25,7 +25,7 @@ public class BossProjectile_slow2 : ProjectileController
     // Update is called once per frame
     void Update()
     {
-        base.projectile(0, -0.03f);
+        base.projectile(0, -0.08f);
         if (transform.position.y > ylimit2 || transform.position.y < ylimit1 || transform.position.x < xlimit1 || transform.position.x > xlimit2) {
             Destroy(gameObject);
         }

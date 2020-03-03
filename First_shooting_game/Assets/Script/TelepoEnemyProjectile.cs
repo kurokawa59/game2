@@ -10,7 +10,7 @@ public class TelepoEnemyProjectile : ProjectileController
     }
 
     void Update() {
-        base.projectile(0, -0.05f);
+        base.projectile(0, -0.07f);
         if (transform.position.y < limit) {
             Destroy(gameObject);
         }

@@ -9,8 +9,9 @@ public class SpaceShip : MonoBehaviour
     [SerializeField]private GameObject EnemyProjectilePrefab;
     private ScoreManager sm;
     public int killpoint;
-    [SerializeField]private AudioClip enemyshotSE;
-    [SerializeField]private AudioClip enemydeadSE;
+    protected int AttackFlag;//攻撃の切り替えのためのフラッグ
+    [SerializeField]private AudioClip enemyshotSE;//発射音
+    [SerializeField]private AudioClip enemydeadSE;//倒された時の音
     private Rigidbody2D rb;
     private PlayerController player;
     
@@ -20,6 +21,7 @@ public class SpaceShip : MonoBehaviour
         sm = GameObject.Find("ScoreManager").GetComponent<ScoreManager>();
         rb = GetComponent<Rigidbody2D>();
         player = GameObject.Find("Player").GetComponent<PlayerController>();
+        AttackFlag = 0;
     }
     void Update() {
         //-6より下にいったらオブジェクトを削除

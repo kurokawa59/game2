@@ -19,7 +19,7 @@ public class TrackingProjectile : MonoBehaviour
     }
     // Update is called once per frame
     void Update(){
-        if(time < 1.0f) {
+        if(time < 0.5f) {
             Track(gameObject.transform);
         }
         if (transform.position.y < limit) {

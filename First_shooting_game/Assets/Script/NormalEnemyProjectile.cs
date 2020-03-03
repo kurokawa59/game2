@@ -11,7 +11,7 @@ public class NormalEnemyProjectile : ProjectileController
     }
 
     void Update() {
-        base.projectile(0, -0.05f);
+        base.projectile(0, -0.1f);
         if (transform.position.y < limit) {
             Destroy(gameObject);
         }

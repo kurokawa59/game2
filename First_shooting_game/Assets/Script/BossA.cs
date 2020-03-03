@@ -13,20 +13,18 @@ public class BossA : Boss {
     void Start() {
         Attack6Count = 0;
         Attack7Count = 0;
+        BossMaxHp = 30;//ボスの体力
 
         rb = GetComponent<Rigidbody2D>();
-        GameObject hp = GameObject.Find("BossHpBar");
+        hp = GameObject.Find("HpManager").GetComponent<HpManager>(); ;
         Player = GameObject.Find("Player").GetComponent<PlayerController>();//Playerオブジェクトからスクリプトを取得
-        HpBar = hp.GetComponent<Slider>();
 
-        BossMaxHp = 30;//ボスの体力
-        HpBar.maxValue = BossMaxHp;
-        HpBar.value = BossMaxHp;
+        hp.SetHp(BossMaxHp);
         base.starttranslate(-2.0f);
     }
     void Update() {
         //0.5秒経ったら行動する
-
+        base.Stop();
         if (time > 0.5f) {
             //フラグが0のときは移動と通常攻撃だけ
             if (AttackFlag == 0) {
@@ -111,24 +109,5 @@ public class BossA : Boss {
         AudioSource.PlayClipAtPoint(BossBeamSE, transform.position);
     }
 
-    void OnTriggerEnter2D(Collider2D collision) {
-        float y_pos = transform.position.y;
-        //プレイヤーとの当たり判定
-        if (collision.gameObject.tag == "Player") {
-            Player.destroyedCount += 1;
-        }
-        //弾が当たったらHpが減る
-        if (y_pos < 5.4) {
-            if (collision.gameObject.tag == "Playerprojectile") {
-                AudioSource.PlayClipAtPoint(BossDamagedSE, transform.position);
-                if (HpBar.value > 1) {
-                    HpBar.value -= 1;
-                }else if (HpBar.value == 1) {
-                    Destroy(gameObject);
-                }
-                Destroy(collision.gameObject);
-            }
-        }
-
-    }
+    
 }

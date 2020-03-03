@@ -12,7 +12,7 @@ public class BeamController : ProjectileController
     }
     void Update()
     {
-        base.projectile(0, -0.03f);
+        base.projectile(0, -0.1f);
         if (transform.position.y < ylimit) {
             Destroy(gameObject);
         }

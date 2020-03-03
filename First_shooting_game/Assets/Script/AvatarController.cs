@@ -20,8 +20,8 @@ public class AvatarController : MonoBehaviour
     void Update()
     {
 
-        //生成されて0.3秒後に移動
-        if (time > 1.0f) {
+        //3秒経ったら弾を撃つ
+        if (time > 2.0f) {
             Shot(gameObject.transform);
             time = 0.0f;
         } 
