@@ -6,7 +6,7 @@ using UnityEngine;
 public class AvatarController : MonoBehaviour
 {
     private float time;
-    [SerializeField]private GameObject BossProjectilePrefab;
+    [SerializeField]private GameObject BossProjectilePrefab;//弾のプレファブ
     [SerializeField]private AudioClip enemyshotSE;
     [SerializeField] private AudioClip enemydeadSE;
 
@@ -20,7 +20,7 @@ public class AvatarController : MonoBehaviour
     void Update()
     {
 
-        //3秒経ったら弾を撃つ
+        //2秒経ったら弾を撃つ
         if (time > 2.0f) {
             Shot(gameObject.transform);
             time = 0.0f;
@@ -29,6 +29,7 @@ public class AvatarController : MonoBehaviour
         time += Time.deltaTime;
     }
 
+    //攻撃する関数
     public void Shot(Transform enemy) {
         Instantiate(BossProjectilePrefab, enemy.position, enemy.rotation);
         AudioSource.PlayClipAtPoint(enemyshotSE, transform.position);

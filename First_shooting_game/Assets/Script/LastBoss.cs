@@ -26,7 +26,7 @@ public class LastBoss : Boss
         Attack3Count = 0;
         Attack4Count = 0;
         Attack5Count = 0;
-        BossMaxHp = 50;//ボスの体力
+        BossMaxHp = 100;//ボスの体力
 
         rb = GetComponent<Rigidbody2D>();
         hp = GameObject.Find("HpManager").GetComponent<HpManager>();

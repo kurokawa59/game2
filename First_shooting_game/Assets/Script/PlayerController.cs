@@ -33,7 +33,7 @@ public class PlayerController : MonoBehaviour
     {
         //スマホでの移動
         //プレイヤーの動き(-3.1 < x < 3.1の範囲で動く)
-        
+        /*
         //タッチ判定
         if (Input.touchCount > 0) {
 
@@ -100,10 +100,10 @@ public class PlayerController : MonoBehaviour
                 }
             }
 
-        }
+        }*/
         
         
-        /*
+        
         //キーボードで移動
         if (Input.GetKey(KeyCode.LeftArrow)) {
             if(-3.1 < transform.position.x) {
@@ -127,7 +127,7 @@ public class PlayerController : MonoBehaviour
             anim.SetBool("right_long", false);
             anim.SetBool("left_long", false);
         }
-        */
+        
 
         //0.5秒ごとに弾を撃ち続ける
         if (time > 0.5f) {

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//ラスボスが出す爆弾
 public class BombController2 : MonoBehaviour
 {
     [SerializeField] private GameObject ProjectilePrefab;
@@ -26,6 +27,7 @@ public class BombController2 : MonoBehaviour
         time += Time.deltaTime;
     }
 
+    //爆発するとNwayCount方向に弾が飛ぶ
     IEnumerator explode(int NwayCount) {
         yield return new WaitForSeconds(1);
 

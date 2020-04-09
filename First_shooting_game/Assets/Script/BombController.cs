@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//
 public class BombController : MonoBehaviour
 {
     [SerializeField] private GameObject ProjectilePrefab;
@@ -18,7 +19,7 @@ public class BombController : MonoBehaviour
     
     void Update()
     {
-        BombCount = GameObject.FindGameObjectsWithTag("Bomb").Length;
+        BombCount = GameObject.FindGameObjectsWithTag("Bomb").Length;//爆弾の数
         if (time > 1.0f) {
             if (BombCount < 3) {
                 explode(3);
@@ -30,6 +31,7 @@ public class BombController : MonoBehaviour
         time += Time.deltaTime;
     }
 
+    //爆発して弾をNwayCount方向に飛ばす
     public void explode(int NwayCount) {
         
         for (int i = 1; i <= NwayCount; i++) {

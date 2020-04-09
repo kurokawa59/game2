@@ -70,7 +70,7 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 494}
   m_MaxSize: {x: 14004, y: 14044}
   vertical: 0
-  controlID: 53
+  controlID: 32
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -241,7 +241,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 494}
   m_MaxSize: {x: 10002, y: 14044}
   vertical: 1
-  controlID: 54
+  controlID: 33
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -266,7 +266,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 222}
   m_MaxSize: {x: 8006, y: 4022}
   vertical: 0
-  controlID: 55
+  controlID: 34
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -286,8 +286,8 @@ MonoBehaviour:
     y: 0
     width: 1152
     height: 641
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 204, y: 222}
+  m_MaxSize: {x: 4004, y: 4022}
   m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 18}
@@ -442,20 +442,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Prefab
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Prefab
   m_LastFoldersGridSize: -1
   m_LastProjectPath: X:\shota\First_shooting_game
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 18320000
-    m_LastClickedID: 12824
-    m_ExpandedIDs: 00000000fa2d000058310000a6310000223500002435000026350000283500002a3500002c3500002e35000030350000323500003435000036350000383500003a3500003c3500003e3500004035000000ca9a3b
+    m_SelectedIDs: 84310000
+    m_LastClickedID: 12676
+    m_ExpandedIDs: 00000000fc2d00005a310000a831000026350000283500002a3500002c3500002e35000030350000323500003435000036350000383500003a3500003c3500003e35000040350000423500004435000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -483,7 +483,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000fa2d000058310000a6310000223500002435000026350000283500002a3500002c3500002e35000030350000323500003435000036350000383500003a3500003c3500003e35000040350000
+    m_ExpandedIDs: 00000000fc2d00005a310000a831000026350000283500002a3500002c3500002e35000030350000323500003435000036350000383500003a3500003c3500003e350000403500004235000044350000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -510,7 +510,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c62300007a350000b234000052310000c83100004486ffff08370000ca33000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -608,7 +608,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 5877ffff8077ffff5878ffff6278ffff6a78ffff7678ffff8278ffff8c78ffff9e78ffffdc79ffff5486ffff8a8dffffae9fffff8aa0ffffd6a2ffff04a3ffffd8a3ffffdea3ffffe2a3ffffeaa3fffff2a3fffff8a3ffff06a4ffff7ae6ffffa8e6ffff7ce7ffff82e7ffff86e7ffff8ee7ffff96e7ffff9ce7ffffaae7ffff94ebffffc2ebffff96ecffff9cecffffa0ecffffa8ecffffb0ecffffb6ecffffc4ecffffa6f5ffffd4f5ffffa8f6ffffaef6ffffb2f6ffffbaf6ffffc2f6ffffc8f6ffffd6f6ffffd0f8ffff02f9ffffdaf9ffffe4f9ffffecf9fffff8f9ffff04faffff0efaffff20faffff6afbffff
+      m_ExpandedIDs: 4cf9ffff74f9ffff4cfaffff52faffff56faffff5efaffff66faffff6cfaffff7afaffff6afbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -668,9 +668,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 8.814012, y: -0.5522992, z: -2424.836}
+    m_Target: {x: 9.2496605, y: -0.71050847, z: -2425.0522}
     speed: 2
-    m_Value: {x: 8.814012, y: -0.5522992, z: -2424.836}
+    m_Value: {x: 9.2496605, y: -0.71050847, z: -2425.0522}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -703,9 +703,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 30.744349
+    m_Target: 28.039616
     speed: 2
-    m_Value: 30.744349
+    m_Value: 28.039616
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -760,7 +760,7 @@ MonoBehaviour:
   m_VSyncEnabled: 0
   m_MaximizeOnPlay: 0
   m_Gizmos: 0
-  m_Stats: 1
+  m_Stats: 0
   m_SelectedSizes: 00000000000000000000000005000000000000000000000000000000000000000000000000000000
   m_TargetDisplay: 0
   m_ZoomArea:

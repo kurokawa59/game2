@@ -6,7 +6,7 @@ public class ShieldGenerator : MonoBehaviour
 {
     [SerializeField] private GameObject ShieldPrefab;
     private float time;
-    private int firstCount;
+    private int firstCount;//ボスCが最初に出現したときのシールド
 
 
     void Start()
@@ -27,7 +27,7 @@ public class ShieldGenerator : MonoBehaviour
                 firstCount = 0;
             } else {
                 if (ShieldCount == 0) {
-                    if (time > 120) {
+                    if (time > 60.0f) {
                         Instantiate(ShieldPrefab, new Vector2(-2.0f, 6), Quaternion.identity);
                         Instantiate(ShieldPrefab, new Vector2(2.0f, 6), Quaternion.identity);
                         time = 0.0f;
